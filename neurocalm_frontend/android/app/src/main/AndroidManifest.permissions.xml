@@ -1,0 +1,10 @@
+<!-- Merge these into android/app/src/main/AndroidManifest.xml (inside <manifest>)
+     after running `flutter create .`. Needed for real BLE + the backend HTTP calls. -->
+<uses-permission android:name="android.permission.INTERNET"/>
+<uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+<uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation"/>
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30"/>
+<uses-feature android:name="android.hardware.bluetooth_le" android:required="false"/>
+<!-- For http:// (non-HTTPS) dev backends add android:usesCleartextTraffic="true" to <application>. -->
